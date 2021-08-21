@@ -1,0 +1,120 @@
+.cases {
+  height: 50vh;
+  position: relative;
+  //height: calc(var(--vh, 1vh) * 50);
+  .cases-navigation {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    padding: 32px;
+    box-sizing: border-box;
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      display: none;
+    }
+    .cases-arrow {
+      background: rgba(184, 216, 186, 0.7);
+      height: 72px;
+      width: 72px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.6s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+      svg {
+        color: var(--color-white);
+        height: 28px;
+        width: 28px;
+      }
+      &.disabled {
+        opacity: 0;
+      }
+      &:hover {
+        background: rgba(184, 216, 186, 1);
+      }
+    }
+  }
+  .row {
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      flex-direction: column;
+    }
+
+    .case {
+      position: relative;
+      background: var(--color-black);
+      &:hover {
+        .case-image {
+          opacity: 0.9;
+        }
+      }
+      .case-details {
+        width: 33.3333vw;
+        height: 50vh;
+        height: calc(var(--vh, 1vh) * 50);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px;
+        box-sizing: border-box;
+        z-index: 1;
+        position: relative;
+        @media all and (max-width: var(--breakpoint-tablet)) {
+          width: 100vw;
+        }
+
+        @media all and (max-width: var(--breakpoint-phone)) {
+          padding: 16px;
+        }
+
+        span {
+          margin-top: 156px;
+          font-size: 1.4rem;
+          opacity: 0.8;
+          color: var(--color-white);
+          font-weight: 600;
+          @media all and (max-width: var(--breakpoint-desktop)) and (min-width: var(--breakpoint-tablet)) {
+            font-size: 1.2rem;
+          }
+          @media all and (max-width: var(--breakpoint-phone)) {
+            font-size: 1rem;
+            line-height: 2.2rem;
+          }
+        }
+        h2 {
+          font-size: 2.4rem;
+          line-height: 3.4rem;
+          width: 85%;
+          margin-top: 16px;
+          color: var(--color-white);
+          @media all and (max-width: var(--breakpoint-desktop)) and (min-width: var(--breakpoint-tablet)) {
+            font-size: 2rem;
+            line-height: 2.4rem;
+          }
+          @media all and (max-width: var(--breakpoint-phone)) {
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            margin-top: 8px;
+          }
+        }
+      }
+      .case-image {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        opacity: 0.65;
+        transition: 0.6s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

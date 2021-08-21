@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  height: 100px;
+  @media all and (max-width: var(--breakpoint-phone)) {
+    height: 90px;
+  }
+
+  .logo {
+    height: 40px;
+    transform: translateY(-2px);
+    cursor: none;
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      height: 30px;
+    }
+    @media all and (max-width: var(--breakpoint-phone)) {
+      height: 30px;
+    }
+  }
+
+  .nav-toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      margin-right: 24px;
+    }
+    @media all and (max-width: var(--breakpoint-phone)) {
+      width: 20px;
+      margin-right: 16px;
+    }
+
+    .hamburger-menu {
+      width: 25px;
+      box-sizing: border-box;
+      cursor: none;
+      span {
+        text-align: center;
+        background: var(--color-black);
+        height: 2px;
+        width: 100%;
+        display: block;
+      }
+      .top-span {
+        margin-bottom: 5px;
+      }
+    }
+    .hamburger-menu-close {
+      position: absolute;
+      display: none;
+
+      svg {
+        @media all and (max-width: var(--breakpoint-tablet)) {
+          width: 56px;
+        }
+
+        @media all and (max-width: var(--breakpoint-phone)) {
+          width: 48px;
+        }
+      }
+    }
+  }
+}

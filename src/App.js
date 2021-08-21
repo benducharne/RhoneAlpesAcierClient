@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { gsap } from "gsap";
+
+import Cursor from "./components/commun/Cursor/Cursor";
+
+import Realisations from "./pages/realisations";
+import SavoirFaire from "./pages/savoirFaire";
+import Services from "./pages/services";
+
+const routes = [
+  { path: "/", Component: Realisations },
+  { path: "/savoir-faire", Component: SavoirFaire },
+  { path: "/services", Component: Services },
+];
 
 function App() {
+  useEffect(() => {
+    // prevents flashing
+    gsap.to("body", 0, { css: { visibility: "visible" } });
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Cursor />
+      <Switch>
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            <Component />
+          </Route>
+        ))}
+      </Switch>
+    </Router>
   );
 }
 
