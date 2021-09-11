@@ -139,7 +139,7 @@
             font-size: 1.6rem;
             text-decoration: none;
             color: var(--color-white);
-            cursor: none;
+            cursor: pointer;
             @media all and (max-width: var(--breakpoint-tablet)) {
               font-size: 1.2rem;
             }

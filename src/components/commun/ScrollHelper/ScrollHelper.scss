@@ -1,0 +1,17 @@
+.scroll-helper {
+  position: absolute;
+  right: calc((100vw - 1280px) / 2 + 36px);
+  bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  .scroll-text {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-right: 16px;
+  }
+}

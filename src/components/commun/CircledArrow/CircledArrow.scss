@@ -1,0 +1,28 @@
+.circled-arrow {
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+  padding: 12px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100px;
+  transition: 0.4s ease-in-out;
+  @media all and (max-width: var(--breakpoint-tablet)) {
+    padding: 6px;
+    width: 18px;
+    height: 18px;
+  }
+  @media all and (max-width: var(--breakpoint-phone)) {
+    padding: 4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.on-hover {
+  cursor: pointer;
+  &:hover {
+    background: var(--color-black);
+    border-color: var(--color-black);
+    color: var(--color-white);
+  }
+}

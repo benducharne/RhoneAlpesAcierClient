@@ -1,65 +1,30 @@
 .cases {
+  visibility: hidden;
   height: 50vh;
   position: relative;
-  //height: calc(var(--vh, 1vh) * 50);
-  .cases-navigation {
-    position: absolute;
-    bottom: 0px;
+
+  .cases-row {
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 6;
-    padding: 32px;
-    box-sizing: border-box;
-    @media all and (max-width: var(--breakpoint-tablet)) {
-      display: none;
-    }
-    .cases-arrow {
-      background: rgba(184, 216, 186, 0.7);
-      height: 72px;
-      width: 72px;
-      border-radius: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.6s cubic-bezier(0.6, -0.05, 0.1, 0.99);
-      svg {
-        color: var(--color-white);
-        height: 28px;
-        width: 28px;
-      }
-      &.disabled {
-        opacity: 0;
-      }
-      &:hover {
-        background: rgba(184, 216, 186, 1);
-      }
-    }
-  }
-  .row {
+    flex-direction: row;
+
     @media all and (max-width: var(--breakpoint-tablet)) {
       flex-direction: column;
     }
 
     .case {
       position: relative;
-      background: var(--color-black);
-      &:hover {
-        .case-image {
-          opacity: 0.9;
-        }
-      }
+
       .case-details {
         width: 33.3333vw;
         height: 50vh;
-        height: calc(var(--vh, 1vh) * 50);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 32px;
+        padding: 16px 32px;
         box-sizing: border-box;
-        z-index: 1;
+        z-index: 3;
         position: relative;
         @media all and (max-width: var(--breakpoint-tablet)) {
           width: 100vw;
@@ -88,6 +53,7 @@
           line-height: 3.4rem;
           width: 85%;
           margin-top: 16px;
+          margin-bottom: 16px;
           color: var(--color-white);
           @media all and (max-width: var(--breakpoint-desktop)) and (min-width: var(--breakpoint-tablet)) {
             font-size: 2rem;
@@ -107,14 +73,51 @@
         height: 100%;
         overflow: hidden;
         position: absolute;
-        opacity: 0.65;
-        transition: 0.6s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+        z-index: 1;
         img {
           height: 100%;
           width: 100%;
           object-fit: cover;
         }
       }
+
+      .gradient {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        opacity: 50%;
+      }
+    }
+  }
+
+  .prev-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    padding: 32px;
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      display: none;
+    }
+  }
+
+  .next-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    padding: 32px;
+
+    @media all and (max-width: var(--breakpoint-tablet)) {
+      display: none;
     }
   }
 }

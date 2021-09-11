@@ -1,10 +1,11 @@
-.main {
+.banner {
   height: calc(50vh - 100px);
-  //height: calc(var(--vh, 1vh) * 50);
   background-color: var(--color-white);
+  visibility: hidden;
   .row {
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: 20px;
     h2 {
       font-size: 3rem;
       line-height: 4.2rem;
@@ -23,9 +24,7 @@
         font-size: 1.2rem;
         line-height: 2.2rem;
       }
-      #first-line {
-        margin-top: 20px;
-      }
+
       .line {
         margin-bottom: 8px;
         height: 56px;
@@ -43,47 +42,22 @@
       }
     }
     .btn-row {
-      width: 300px;
-      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       z-index: 2;
-      a {
-        font-size: 1.6rem;
+
+      .btn-text {
         color: var(--color-black);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
+        font-size: 1.6rem;
         font-weight: 600;
-        cursor: none;
+        margin-right: 16px;
+
         @media all and (max-width: var(--breakpoint-tablet)) {
           font-size: 1.3rem;
         }
         @media all and (max-width: var(--breakpoint-phone)) {
           font-size: 1.1rem;
-        }
-        svg {
-          margin-left: 16px;
-          border: 2px solid var(--color-black);
-          padding: 12px;
-          height: 20px;
-          width: 20px;
-          border-radius: 100px;
-          transition: 0.4s ease-in-out;
-          @media all and (max-width: var(--breakpoint-tablet)) {
-            padding: 6px;
-            width: 18px;
-            height: 18px;
-          }
-          @media all and (max-width: var(--breakpoint-phone)) {
-            padding: 4px;
-            width: 16px;
-            height: 16px;
-          }
-        }
-        &:hover {
-          svg {
-            background: var(--color-black);
-            color: var(--color-white);
-          }
         }
       }
     }

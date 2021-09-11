@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
-import "./Company.scss";
+import "./Bardage.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import left_image from "../../../assets/images/jpg/savoirGauche.jpg";
-import right_image from "../../../assets/images/jpg/savoirDroite.jpg";
+import left_image from "../../../assets/images/jpg/servicesBardageGauche.jpg";
+import right_image from "../../../assets/images/jpg/servicesBardageDroite.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Company = () => {
+const Bardage = () => {
   useEffect(() => {
-    gsap.from(".company-section .line span", {
+    gsap.from(".bardage-section .line span", {
       scrollTrigger: {
-        trigger: ".company-section",
+        trigger: ".bardage-section",
         start: "top center",
       },
       duration: 1.8,
@@ -24,19 +24,19 @@ const Company = () => {
       },
     });
 
-    gsap.to(".company-left-layout img", {
+    gsap.to(".bardage-left-layout img", {
       scrollTrigger: {
-        trigger: ".company-section",
+        trigger: ".bardage-section",
         start: "top center",
       },
       css: { clipPath: "inset(0% 0% 0% 0%)" },
-      duration: 0.4,
+      duration: 1,
       ease: "none",
     });
 
-    gsap.to(".company-right-layout img", {
+    gsap.to(".bardage-right-layout img", {
       scrollTrigger: {
-        trigger: ".company-section",
+        trigger: ".bardage-section",
         start: "top center",
       },
       css: { clipPath: "inset(0% 0% 0% 0%)" },
@@ -46,39 +46,37 @@ const Company = () => {
   }, []);
 
   return (
-    <section className="company-section">
+    <section className="bardage-section">
       <div className="container">
         <div className="row">
-          <div className="company-left-layout">
+          <div className="bardage-left-layout">
             <img src={left_image} alt="" />
           </div>
-          <div className="company-right-layout">
+          <div className="bardage-right-layout">
             <div className="text-container">
-              <h2 id="first-h2">
+              <h4>
                 <div className="line">
-                  <span>Laissez nous vous apporter toute notre expertise</span>
+                  <span>Le bardage et l'habillage de façade</span>
+                </div>
+              </h4>
+              <h2>
+                <div className="line">
+                  <span>_ Bardage simple et double peau</span>
                 </div>
                 <div className="line">
-                  <span>en conception, mise en place et réalisation</span>
+                  <span>_ Panneaux sandwich</span>
                 </div>
                 <div className="line">
-                  <span>de l'enveloppe du bâtiment.</span>
-                </div>
-              </h2>
-              <h2 id="second-h2">
-                <div className="line">
-                  <span>Situés dans l'Est Lyonnais,</span>
+                  <span>_ Réfection façades existantes</span>
                 </div>
                 <div className="line">
                   <span>
-                    nous intervenons sur l'ensemble du territoire français
+                    _ Façade décorative : cassettes, bardage plan, panneaux
+                    composite bois,
                   </span>
                 </div>
                 <div className="line">
-                  <span>et sur tous types de chantier :</span>
-                </div>
-                <div className="line">
-                  <span>publics, industriels, commerciaux et tertiaires.</span>
+                  <span>aluminium, fibre-ciment, pierre et bardage bois</span>
                 </div>
               </h2>
             </div>
@@ -90,4 +88,4 @@ const Company = () => {
   );
 };
 
-export default Company;
+export default Bardage;

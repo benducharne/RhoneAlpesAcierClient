@@ -1,14 +1,16 @@
 import React from "react";
 import "./Banner.scss";
-import { ReactComponent as RightArrow } from "../../../assets/images/arrow-right.svg";
+import { Link } from "react-router-dom";
+
+import CircledArrow from "../../commun/CircledArrow/CircledArrow";
 
 const HoBanner = () => {
   return (
-    <section className="main">
+    <section className="banner">
       <div className="container">
         <div className="row">
           <h2>
-            <div className="line" id="first-line">
+            <div className="line">
               <span>L'enveloppe du bâtiment</span>
             </div>
             <div className="line">
@@ -16,9 +18,10 @@ const HoBanner = () => {
             </div>
           </h2>
           <div className="btn-row">
-            <a href="/savoir-faire">
-              Notre savoir-faire <RightArrow />
-            </a>
+            <div className="btn-text">Notre savoir-faire</div>
+            <Link to="/savoir-faire">
+              <CircledArrow onHover={true} rotation={"0"} />
+            </Link>
           </div>
         </div>
       </div>

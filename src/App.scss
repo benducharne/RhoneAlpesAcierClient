@@ -21,11 +21,16 @@ html {
   font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .container {
@@ -60,19 +65,4 @@ body {
   .space-between {
     justify-content: space-between;
   }
-}
-
-.container-fluid {
-  width: 100%;
-  height: 100%;
-  .row {
-    display: flex;
-    height: 100%;
-  }
-}
-
-.App {
-  z-index: 2;
-  transform: translateY(0);
-  position: relative;
 }

@@ -4,7 +4,9 @@ import "./IntroOverlay.scss";
 const HoIntroOverlay = () => {
   return (
     <>
-      <div className="intro-overlay">
+      <div className="white-intro-overlay" />
+
+      <div className="black-intro-overlay">
         <div className="top">
           <div className="overlay-top"></div>
           <div className="overlay-top"></div>

@@ -2,20 +2,29 @@ import React from "react";
 
 import Navigation from "../components/commun/Navigation/Navigation";
 import Header from "../components/commun/Header/Header";
-import Hero from "../components/savoirFaire/Hero/Hero";
+import HeroSection from "../components/commun/HeroSection/HeroSection";
 import Company from "../components/savoirFaire/Company/Company";
 import Gallery from "../components/savoirFaire/Gallery/Gallery";
-import Footer from "../components/savoirFaire/Footer/Footer";
+import Footer from "../components/commun/Footer/Footer";
+import TransitionOverlay from "../components/commun/TransitionOverlay/TransitionOverlay";
+
+const lines = [
+  "Créée en 1986, Rhône-Alpes Acier est",
+  "une structure dynamique à taille humaine",
+  "qui dispose d’un bureau d’étude intégré.",
+];
 
 const SavoirFaire = () => {
   return (
     <>
       <Navigation />
       <Header />
-      <Hero />
+      <HeroSection title={"Savoir-faire"} lines={lines} />
       <Company />
       <Gallery />
-      <Footer />
+      <Footer text={"Services"} to={"/services"} />
+
+      <TransitionOverlay />
     </>
   );
 };

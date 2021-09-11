@@ -4,10 +4,10 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import cn from "classnames";
 
-import plans from "../../../assets/images/plans.png";
-import materiaux from "../../../assets/images/materiaux.png";
-import acoustique from "../../../assets/images/acoustique.png";
-import thermique from "../../../assets/images/thermique.png";
+import plans from "../../../assets/images/jpg/savoirPlans.jpg";
+import materiaux from "../../../assets/images/jpg/savoirMateriaux.jpg";
+import acoustique from "../../../assets/images/jpg/savoirAcoustique.jpg";
+import thermique from "../../../assets/images/jpg/savoirThermique.jpg";
 
 import useOnScreen from "../../../assets/hooks/useOnScreen";
 
@@ -80,8 +80,8 @@ export default function Gallery() {
         start: "top top",
         trigger: ref.current,
         pin: true,
-        scrub: 0.5,
-        snap: 1 / (sections.length - 1),
+        scrub: 1,
+        //snap: 1 / (sections.length - 1),
         end: () => `+=${ref.current.offsetWidth}`,
       },
     });

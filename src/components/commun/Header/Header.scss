@@ -1,6 +1,8 @@
 .header {
   width: 100%;
   height: 100px;
+  z-index: 110;
+  visibility: hidden;
   @media all and (max-width: var(--breakpoint-phone)) {
     height: 90px;
   }
@@ -8,7 +10,7 @@
   .logo {
     height: 40px;
     transform: translateY(-2px);
-    cursor: none;
+    cursor: pointer;
     @media all and (max-width: var(--breakpoint-tablet)) {
       height: 30px;
     }
@@ -22,6 +24,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 30px;
+    width: 40px;
+    cursor: pointer;
     @media all and (max-width: var(--breakpoint-tablet)) {
       margin-right: 24px;
     }
@@ -33,7 +38,6 @@
     .hamburger-menu {
       width: 25px;
       box-sizing: border-box;
-      cursor: none;
       span {
         text-align: center;
         background: var(--color-black);
@@ -48,6 +52,7 @@
     .hamburger-menu-close {
       position: absolute;
       display: none;
+      cursor: pointer;
 
       svg {
         @media all and (max-width: var(--breakpoint-tablet)) {
