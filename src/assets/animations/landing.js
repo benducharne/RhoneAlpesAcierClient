@@ -3,7 +3,8 @@ import gsap from "gsap";
 let tl = gsap.timeline();
 
 const landing = () => {
-  tl.to([".header", ".banner", ".cases"], { css: { visibility: "visible" } })
+  tl.to("body", { overflowY: "hidden" })
+    .to([".header", ".banner", ".cases"], { css: { visibility: "visible" } })
     .to(".white-intro-overlay", 1, {
       height: 0,
       ease: "expo.inOut",
@@ -44,7 +45,8 @@ const landing = () => {
       stagger: {
         amount: 0.4,
       },
-    });
+    })
+    .to("body", { overflowY: "scroll" });
 };
 
 export default landing;

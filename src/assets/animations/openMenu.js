@@ -3,11 +3,16 @@ import gsap from "gsap";
 let tl = gsap.timeline();
 
 const openMenu = () => {
+  let navigationHeight = "50vh";
+  if (window.innerWidth <= 768) {
+    navigationHeight = "100vh - 80px";
+  }
+
   tl.to(".navigation", 0, {
     css: { display: "block" },
   })
     .to(".navigation", 1, {
-      css: { height: "calc(50vh + 1px)" },
+      css: { height: `calc(${navigationHeight} + 1px)` },
     })
     .to(".hamburger-menu span", 0.6, {
       delay: -1,

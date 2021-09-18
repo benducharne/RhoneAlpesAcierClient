@@ -7,9 +7,8 @@
   display: none;
   overflow: hidden;
   background: var(--color-green);
-  @media all and (max-width: 654px) {
+  @media all and (max-width: 768px) {
     flex-direction: column;
-    height: 70vh;
   }
 
   a {
@@ -35,26 +34,27 @@
   }
   .nav-columns {
     display: flex;
-    height: 50vh;
+    height: calc(50vh + 1px);
     padding: 0 32px;
-    @media all and (max-width: 654px) {
+    @media all and (max-width: 768px) {
       flex-direction: column;
-      height: 70vh;
+      justify-content: space-around;
+      height: calc(100vh - 80px + 1px);
     }
-    @media all and (max-width: var(--breakpoint-phone)) {
+    @media all and (max-width: 425px) {
       padding: 0 16px;
     }
 
     .nav-column {
       width: 45%;
       padding: 32px 0;
-      @media all and (max-width: 654px) {
+      @media all and (max-width: 768px) {
         width: 100%;
         padding: 16px 0;
       }
       &:last-child {
         width: 55%;
-        @media all and (max-width: 654px) {
+        @media all and (max-width: 768px) {
           width: 100%;
         }
       }
@@ -62,12 +62,12 @@
         margin-bottom: 1.4rem;
         font-size: 1.4rem;
         color: var(--color-white);
-        @media all and (max-width: var(--breakpoint-tablet)) {
-          font-size: 1rem;
+        @media all and (max-width: 768px) {
+          font-size: 1.2rem;
           margin-bottom: 1.2rem;
         }
-        @media all and (max-width: var(--breakpoint-phone)) {
-          font-size: 0.875rem;
+        @media all and (max-width: 425px) {
+          font-size: 1rem;
           margin-bottom: 1rem;
         }
       }
@@ -86,7 +86,7 @@
           flex-direction: column;
           width: 100%;
           margin-bottom: 10px;
-          @media all and (max-width: var(--breakpoint-phone)) {
+          @media all and (max-width: 425px) {
             margin-bottom: 5px;
           }
           .nav-info-label {
@@ -98,13 +98,13 @@
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--color-white);
-            @media all and (max-width: var(--breakpoint-tablet)) {
-              font-size: 1rem;
+            @media all and (max-width: 768px) {
+              font-size: 1.2rem;
               margin-bottom: 1rem;
             }
 
-            @media all and (max-width: var(--breakpoint-phone)) {
-              font-size: 0.8rem;
+            @media all and (max-width: 425px) {
+              font-size: 1rem;
               margin-bottom: 0.875rem;
             }
 
@@ -126,11 +126,11 @@
         li {
           list-style: none;
           margin-bottom: 50px;
-          @media all and (max-width: var(--breakpoint-tablet)) {
+          @media all and (max-width: 768px) {
             margin-bottom: 25px;
           }
 
-          @media all and (max-width: var(--breakpoint-phone)) {
+          @media all and (max-width: 425px) {
             margin-bottom: 20px;
           }
 
@@ -140,12 +140,12 @@
             text-decoration: none;
             color: var(--color-white);
             cursor: pointer;
-            @media all and (max-width: var(--breakpoint-tablet)) {
-              font-size: 1.2rem;
+            @media all and (max-width: 768px) {
+              font-size: 1.4rem;
             }
 
-            @media all and (max-width: var(--breakpoint-phone)) {
-              font-size: 1rem;
+            @media all and (max-width: 425px) {
+              font-size: 1.2rem;
             }
           }
         }

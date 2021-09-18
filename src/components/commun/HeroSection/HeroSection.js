@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import "./HeroSection.scss";
 import gsap from "gsap";
 import ScrollHeper from "../ScrollHelper/ScrollHeper";
+import useWindowDimensions from "../../../assets/hooks/useWindowDimensions";
 
-const HeroSection = ({ title, lines }) => {
+const HeroSection = ({ title, longLines, shortLines }) => {
+  const { height, width } = useWindowDimensions();
+
   useEffect(() => {
     let tl = gsap.timeline();
     tl.to("body", { overflowY: "hidden" })
@@ -52,13 +55,23 @@ const HeroSection = ({ title, lines }) => {
               <span>{title}</span>
             </div>
           </h4>
-          <h2>
-            {lines.map((line) => (
-              <div key={line} className="line">
-                <span>{line}</span>
-              </div>
-            ))}
-          </h2>
+          {width > 768 ? (
+            <h2>
+              {longLines.map((line) => (
+                <div key={line} className="line">
+                  <span>{line}</span>
+                </div>
+              ))}
+            </h2>
+          ) : (
+            <h2>
+              {shortLines.map((line) => (
+                <div key={line} className="line">
+                  <span>{line}</span>
+                </div>
+              ))}
+            </h2>
+          )}
         </div>
       </div>
       <ScrollHeper />

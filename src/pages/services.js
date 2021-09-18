@@ -10,11 +10,20 @@ import Autres from "../components/services/Autres/Autres";
 import TransitionOverlay from "../components/commun/TransitionOverlay/TransitionOverlay";
 import Footer from "../components/commun/Footer/Footer";
 
-const lines = [
+const longLines = [
   "Notre activité est répartie en",
   "4 domaines d’expertise",
   "répondant à l’ensemble des exigences",
   "thermiques, sécuritaires et esthétiques.",
+];
+
+const shortLines = [
+  "Notre activité est",
+  "répartie en 4 domaines",
+  "d’expertise répondant à",
+  "l’ensemble des exigences",
+  "thermiques, sécuritaires",
+  "et esthétiques.",
 ];
 
 const Services = () => {
@@ -22,7 +31,11 @@ const Services = () => {
     <>
       <Navigation />
       <Header />
-      <HeroSection title={"Services"} lines={lines} />
+      <HeroSection
+        title={"Services"}
+        longLines={longLines}
+        shortLines={shortLines}
+      />
       <Etancheite />
       <Toiture />
       <Bardage />

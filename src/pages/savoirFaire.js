@@ -8,10 +8,19 @@ import Gallery from "../components/savoirFaire/Gallery/Gallery";
 import Footer from "../components/commun/Footer/Footer";
 import TransitionOverlay from "../components/commun/TransitionOverlay/TransitionOverlay";
 
-const lines = [
+const longLines = [
   "Créée en 1986, Rhône-Alpes Acier est",
   "une structure dynamique à taille humaine",
   "qui dispose d’un bureau d’étude intégré.",
+];
+
+const shortLines = [
+  "Créée en 1986,",
+  "Rhône-Alpes Acier est",
+  "une structure dynamique",
+  "à taille humaine",
+  "qui dispose d’un",
+  "bureau d’étude intégré.",
 ];
 
 const SavoirFaire = () => {
@@ -19,7 +28,11 @@ const SavoirFaire = () => {
     <>
       <Navigation />
       <Header />
-      <HeroSection title={"Savoir-faire"} lines={lines} />
+      <HeroSection
+        title={"Savoir-faire"}
+        longLines={longLines}
+        shortLines={shortLines}
+      />
       <Company />
       <Gallery />
       <Footer text={"Services"} to={"/services"} />

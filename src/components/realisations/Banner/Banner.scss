@@ -2,10 +2,13 @@
   height: calc(50vh - 100px);
   background-color: var(--color-white);
   visibility: hidden;
+  @media all and (max-width: 768px) {
+    height: calc(50vh - 80px);
+  }
+
   .row {
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
+    justify-content: center;
     h2 {
       font-size: 3rem;
       line-height: 4.2rem;
@@ -14,13 +17,12 @@
       color: var(--color-white);
       mix-blend-mode: difference;
       margin-top: 0;
-      margin-bottom: 28px;
-      @media all and (max-width: var(--breakpoint-tablet)) {
+      margin-bottom: 20px;
+      @media all and (max-width: 768px) {
         font-size: 2rem;
         line-height: 3rem;
       }
-      @media all and (max-width: var(--breakpoint-phone)) {
-        margin-top: 72px;
+      @media all and (max-width: 425px) {
         font-size: 1.2rem;
         line-height: 2.2rem;
       }
@@ -30,10 +32,10 @@
         height: 56px;
         position: relative;
         overflow: hidden;
-        @media all and (max-width: var(--breakpoint-tablet)) {
+        @media all and (max-width: 768px) {
           height: 48px;
         }
-        @media all and (max-width: var(--breakpoint-phone)) {
+        @media all and (max-width: 425px) {
           height: 32px;
         }
         span {
@@ -53,12 +55,18 @@
         font-weight: 600;
         margin-right: 16px;
 
-        @media all and (max-width: var(--breakpoint-tablet)) {
+        @media all and (max-width: 768px) {
           font-size: 1.3rem;
         }
-        @media all and (max-width: var(--breakpoint-phone)) {
+        @media all and (max-width: 425px) {
           font-size: 1.1rem;
         }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
