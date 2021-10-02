@@ -7,7 +7,7 @@ function TransitionOverlay() {
     <motion.div
       className="transition-overlay"
       exit={{ top: 0 }}
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1, delay: 0, ease: [0.42, 0, 0.58, 1] }}
     />
   );
 }

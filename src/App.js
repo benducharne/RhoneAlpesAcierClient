@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { gsap } from "gsap";
 
 import Realisations from "./pages/realisations";
 import SavoirFaire from "./pages/savoirFaire";
 import Services from "./pages/services";
+import Erreur from "./pages/erreur";
 
 function App() {
-  useEffect(() => {
-    // prevents flashing
-    gsap.to("body", 0, { css: { visibility: "visible" } });
-  });
-
   return (
     <Router>
       <Route
@@ -27,13 +22,14 @@ function App() {
             }}
           >
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/" render={() => <Realisations />} />
+              <Route path="/" exact render={() => <Realisations />} />
               <Route
-                exact
                 path="/savoir-faire"
+                exact
                 render={() => <SavoirFaire />}
               />
-              <Route exact path="/services" render={() => <Services />} />
+              <Route path="/services" exact render={() => <Services />} />
+              <Route path="/" render={() => <Erreur />} />
             </Switch>
           </AnimatePresence>
         )}

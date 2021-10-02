@@ -9,7 +9,7 @@ function Footer({ text, to }) {
     <section className="footer">
       <div className="container">
         <div className="row">
-          <div className="page-suivante">Page Suivante</div>
+          <div className="page-suivante">Page suivante</div>
           <div className="btn-row">
             <div className="btn-text">{text}</div>
             <Link to={to}>

@@ -1,17 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./HeroSection.scss";
 import gsap from "gsap";
 import ScrollHeper from "../ScrollHelper/ScrollHeper";
 import useWindowDimensions from "../../../assets/hooks/useWindowDimensions";
 
-const HeroSection = ({ title, longLines, shortLines }) => {
-  const { height, width } = useWindowDimensions();
+const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
+  const { width } = useWindowDimensions();
+  const [initialScrollZero, setInitialScrollZero] = useState(true);
 
   useEffect(() => {
+    if (window.scrollY !== 0) {
+      setInitialScrollZero(false);
+    } else {
+      setInitialScrollZero(true);
+    }
+
     let tl = gsap.timeline();
-    tl.to("body", { overflowY: "hidden" })
+    tl.to("body", { overflowY: window.scrollY === 0 ? "hidden" : "scroll" })
       .to([".hero-section", ".header"], { css: { visibility: "visible" } })
-      .from(".hero-section .line span", 1.8, {
+      .from(".hero-section .line span", 1.6, {
         y: 100,
         ease: "power4.out",
         skewY: 7,
@@ -19,18 +26,18 @@ const HeroSection = ({ title, longLines, shortLines }) => {
           amount: 0.3,
         },
       })
-      .from(".header", 1.5, {
+      .from(".header", 1.6, {
         opacity: 0,
         ease: "power4.out",
       })
       .from(
         ".scroll-helper",
-        1.5,
+        1.6,
         {
           opacity: 0,
           ease: "power4.out",
         },
-        "-=1.5"
+        "-=1.6"
       )
       .to(".scroll-helper", {
         opacity: 0,
@@ -74,7 +81,7 @@ const HeroSection = ({ title, longLines, shortLines }) => {
           )}
         </div>
       </div>
-      <ScrollHeper />
+      {initialScrollZero && displayScrollHelper ? <ScrollHeper /> : null}
     </section>
   );
 };

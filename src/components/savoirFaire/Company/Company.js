@@ -10,12 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Company = () => {
   useEffect(() => {
-    gsap.from(".company-section .line span", {
+    gsap.from(".company-section .company-line span", {
       scrollTrigger: {
         trigger: ".company-section",
         start: "top center",
       },
-      duration: 1.8,
+      duration: 1.6,
       y: 100,
       ease: "power4.out",
       skewY: 7,
@@ -52,32 +52,31 @@ const Company = () => {
           <div className="company-left-layout">
             <img src={left_image} alt="" />
           </div>
+          <div className="company-mid-layout" />
           <div className="company-right-layout">
             <div className="text-container">
               <h2 id="first-h2">
-                <div className="line">
+                <div className="company-line">
                   <span>Laissez nous vous apporter toute notre expertise</span>
                 </div>
-                <div className="line">
+                <div className="company-line">
                   <span>en conception, mise en place et réalisation</span>
                 </div>
-                <div className="line">
+                <div className="company-line">
                   <span>de l'enveloppe du bâtiment.</span>
                 </div>
               </h2>
               <h2 id="second-h2">
-                <div className="line">
+                <div className="company-line">
                   <span>Situés dans l'Est Lyonnais,</span>
                 </div>
-                <div className="line">
-                  <span>
-                    nous intervenons sur l'ensemble du territoire français
-                  </span>
+                <div className="company-line">
+                  <span>nous intervenons sur l'ensemble du territoire</span>
                 </div>
-                <div className="line">
-                  <span>et sur tous types de chantier :</span>
+                <div className="company-line">
+                  <span>français et sur tous types de chantier :</span>
                 </div>
-                <div className="line">
+                <div className="company-line">
                   <span>publics, industriels, commerciaux et tertiaires.</span>
                 </div>
               </h2>

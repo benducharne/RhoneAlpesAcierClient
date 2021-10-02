@@ -5,14 +5,12 @@
 
 .gallery-counter {
   position: absolute;
-  top: 10%;
+  top: 4%;
   left: 100px;
   z-index: 1;
   line-height: 16px;
   color: var(--color-white);
-
   font-weight: 600;
-
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -47,12 +45,14 @@
     z-index: 1;
     transform: translateX(-20%);
     color: var(--color-white);
+    @media all and (max-width: 768px) {
+      transform: translateX(-5%);
+    }
 
     .gallery-info-title {
       line-height: 6vw;
       font-family: "Bai Jamjuree";
       font-weight: 600;
-
       font-size: 6vw;
       -webkit-font-smoothing: antialiased;
     }
@@ -60,8 +60,11 @@
   .gallery-item-wrapper {
     height: 100%;
     display: grid;
-    grid-template-columns: 20vw 1fr 200px;
+    grid-template-columns: 20vw 1fr 20vw;
     width: 100vw;
+    @media all and (max-width: 768px) {
+      grid-template-columns: 10vw 1fr 10vw;
+    }
 
     &.is-reveal {
       .gallery-item-image {
