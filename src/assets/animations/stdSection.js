@@ -10,6 +10,7 @@ export const stdRightAnimation = () => {
       gsap.from(span, {
         scrollTrigger: {
           trigger: section,
+
           start: "top center",
         },
         duration: 1.6,

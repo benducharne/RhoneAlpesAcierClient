@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Gallery.scss";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import cn from "classnames";
 
 import plans from "../../../assets/images/jpg/savoirPlans.jpg";
@@ -11,7 +9,7 @@ import thermique from "../../../assets/images/jpg/savoirThermique.jpg";
 
 import useOnScreen from "../../../assets/hooks/useOnScreen";
 
-gsap.registerPlugin(ScrollTrigger);
+import galleryScroll from "../../../assets/animations/galleryScroll";
 
 const images = [
   {
@@ -68,28 +66,13 @@ export default function Gallery() {
     setActiveImage(index + 1);
   };
 
-  const ref = useRef(null);
-
   useEffect(() => {
-    let sections = gsap.utils.toArray(".gallery-item-wrapper");
-
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        start: "top top",
-        trigger: ref.current,
-        pin: true,
-        scrub: 1,
-        //snap: 1 / (sections.length - 1),
-        end: () => `+=${ref.current.offsetWidth}`,
-      },
-    });
+    galleryScroll();
   }, []);
 
   return (
     <section className="gallery-wrap">
-      <div className="gallery" ref={ref}>
+      <div className="gallery">
         <div className="gallery-counter">
           <span>{activeImage}</span>
           <span className="divider" />

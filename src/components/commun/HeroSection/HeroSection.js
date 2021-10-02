@@ -16,7 +16,9 @@ const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
     }
 
     let tl = gsap.timeline();
-    tl.to("body", { overflowY: window.scrollY === 0 ? "hidden" : "scroll" })
+    tl.to("body", {
+      overflowY: window.scrollY === 0 ? "hidden" : "scroll",
+    })
       .to([".hero-section", ".header"], { css: { visibility: "visible" } })
       .from(".hero-section .line span", 1.6, {
         y: 100,

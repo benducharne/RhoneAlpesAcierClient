@@ -23,14 +23,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+.fake-body::-webkit-scrollbar {
   display: none;
 }
 
-body {
-  //overflow-x: hidden;
+body,
+.fake-body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.fake-body {
+  overflow-x: hidden;
 }
 
 .container {
