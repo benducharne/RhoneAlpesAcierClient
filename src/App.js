@@ -39,33 +39,3 @@ function App() {
 }
 
 export default App;
-
-/*<Router>
-      <Switch>
-        {routes.map(({ path, Component }) => (
-          <AnimatePresence initial={false} exitBeforeEnter>
-            <Route key={path} exact path={path}>
-              <Component />
-            </Route>
-          </AnimatePresence>
-        ))}
-      </Switch>
-        </Router>*/
-
-/*<Router>
-      <Route
-        render={({ location }) => (
-          <AnimatePresence initial={false} exitBeforeEnter>
-            <Switch location={location} key={location.pathname}>
-              <Route exact path="/" render={() => <Realisations />} />
-              <Route
-                exact
-                path="/savoir-faire"
-                render={() => <SavoirFaire />}
-              />
-              <Route exact path="/services" render={() => <Services />} />
-            </Switch>
-          </AnimatePresence>
-        )}
-      />
-    </Router>*/
