@@ -1,10 +1,6 @@
 .banner {
-  height: calc(50vh - 100px);
   background-color: var(--color-white);
   visibility: hidden;
-  @media all and (max-width: 768px) {
-    height: calc(50vh - 80px);
-  }
 
   .row {
     flex-direction: column;
@@ -18,13 +14,25 @@
       mix-blend-mode: difference;
       margin-top: 0;
       margin-bottom: 20px;
-      @media all and (max-width: 768px) {
+      @media all and (max-width: 768px), all and (max-height: 600px) {
         font-size: 2rem;
         line-height: 3rem;
       }
+      @media all and (max-width: 600px) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+      }
       @media all and (max-width: 425px) {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         line-height: 2.2rem;
+      }
+      @media all and (max-width: 375px) {
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+      @media all and (max-width: 320px) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
       }
 
       .line {
@@ -32,7 +40,7 @@
         height: 56px;
         position: relative;
         overflow: hidden;
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 768px), all and (max-height: 600px) {
           height: 48px;
         }
         @media all and (max-width: 425px) {
@@ -55,11 +63,20 @@
         font-weight: 600;
         margin-right: 16px;
 
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 768px), all and (max-height: 600px) {
+          font-size: 1.4rem;
+        }
+        @media all and (max-width: 600px) {
           font-size: 1.3rem;
         }
         @media all and (max-width: 425px) {
+          font-size: 1.2rem;
+        }
+        @media all and (max-width: 375px) {
           font-size: 1.1rem;
+        }
+        @media all and (max-width: 320px) {
+          font-size: 1rem;
         }
       }
 

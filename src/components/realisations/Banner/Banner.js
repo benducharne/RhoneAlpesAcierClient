@@ -1,12 +1,22 @@
 import React from "react";
 import "./Banner.scss";
 import { Link } from "react-router-dom";
+import { useViewport } from "../../../assets/hooks/useViewport";
 
 import CircledArrow from "../../commun/CircledArrow/CircledArrow";
 
 const HoBanner = () => {
+  const { width, height } = useViewport();
+
   return (
-    <section className="banner">
+    <section
+      className="banner"
+      style={{
+        height: `${
+          width <= 768 || height <= 600 ? height / 2 - 80 : height / 2 - 100
+        }px`,
+      }}
+    >
       <div className="container">
         <div className="row">
           <h2>

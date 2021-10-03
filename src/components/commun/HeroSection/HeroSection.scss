@@ -1,11 +1,7 @@
 .hero-section {
-  height: calc(100vh - 100px);
   background-color: var(--color-white);
   position: relative;
   visibility: hidden;
-  @media all and (max-width: 768px) {
-    height: calc(100vh - 80px);
-  }
 
   .row {
     flex-direction: column;
@@ -60,12 +56,18 @@
       }
       @media all and (max-width: 850px) {
         font-size: 2rem;
-        line-height: 3rem;
       }
-      @media all and (max-width: 425px) {
-        font-size: 1.2rem;
+      @media all and (max-width: 600px) {
+        font-size: 1.8rem;
         line-height: 2.2rem;
       }
+      @media all and (max-width: 425px) {
+        font-size: 1.5rem;
+      }
+      @media all and (max-width: 375px) {
+        font-size: 1.2rem;
+      }
+
       .line {
         margin-bottom: 8px;
         height: 56px;
@@ -74,7 +76,7 @@
         @media all and (max-width: 768px) {
           height: 48px;
         }
-        @media all and (max-width: 425px) {
+        @media all and (max-width: 600px) {
           height: 32px;
         }
         span {

@@ -55,15 +55,15 @@ const bardageLines = [
   "_ Bardage simple et double peau",
   "_ Panneaux sandwich",
   "_ Réfection façades existantes",
-  "_ Façade décorative : cassettes, bardage plan, panneaux composite bois,",
-  "aluminium, fibre-ciment, pierre et bardage bois",
+  "_ Façade décorative : cassettes, bardage plan, panneaux",
+  "composite bois, aluminium, fibre-ciment, pierre et bardage bois",
 ];
 const autresLines = [
-  "_ L’éclairement naturel, le désenfumage et l’asservissement",
-  "_ La zinguerie et l’évacuation des eaux pluviales",
-  "_ Les planchers collaborants",
-  "_ Les contrats d’entretien annuel des toitures terrasses",
-  "_ La maintenance et mise en conformité de système de désenfumage naturel",
+  "_ Eclairement naturel, le désenfumage et l’asservissement",
+  "_ Zinguerie et l’évacuation des eaux pluviales",
+  "_ Planchers collaborants",
+  "_ Contrats d’entretien annuel des toitures terrasses",
+  "_ Maintenance et mise en conformité de système de désenfumage",
   "_ Accessibilité en toiture : passes acrotères, échelles à crinoline",
   "_ Sécurisation de toiture individuelle et collective",
 ];

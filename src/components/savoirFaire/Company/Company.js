@@ -57,24 +57,27 @@ const Company = () => {
             <div className="text-container">
               <h2 id="first-h2">
                 <div className="company-line">
-                  <span>Laissez nous vous apporter toute notre expertise</span>
+                  <span>
+                    Laissez nous vous apporter toute notre expertise en
+                    conception,
+                  </span>
                 </div>
                 <div className="company-line">
-                  <span>en conception, mise en place et réalisation</span>
-                </div>
-                <div className="company-line">
-                  <span>de l'enveloppe du bâtiment.</span>
+                  <span>
+                    mise en place et réalisation de l'enveloppe du bâtiment.
+                  </span>
                 </div>
               </h2>
               <h2 id="second-h2">
                 <div className="company-line">
-                  <span>Situés dans l'Est Lyonnais,</span>
+                  <span>
+                    Situés dans l'Est Lyonnais, nous intervenons sur l'ensemble
+                  </span>
                 </div>
                 <div className="company-line">
-                  <span>nous intervenons sur l'ensemble du territoire</span>
-                </div>
-                <div className="company-line">
-                  <span>français et sur tous types de chantier :</span>
+                  <span>
+                    du territoire français et sur tous types de chantier :
+                  </span>
                 </div>
                 <div className="company-line">
                   <span>publics, industriels, commerciaux et tertiaires.</span>

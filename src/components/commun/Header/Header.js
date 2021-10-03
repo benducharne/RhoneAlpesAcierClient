@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
+import { useViewport } from "../../../assets/hooks/useViewport";
 
 import { ReactComponent as UpArrow } from "../../../assets/images/svg/arrow-up.svg";
 import openMenu from "../../../assets/animations/openMenu";
@@ -10,6 +11,7 @@ import Logo from "../../../assets/images/png/Logo.png";
 
 const Header = ({ history }) => {
   const [menuState, setMenuState] = useState({ menuOpened: false });
+  const { width, height } = useViewport();
 
   useEffect(() => {
     //Listening for page changes.
@@ -17,7 +19,7 @@ const Header = ({ history }) => {
       setMenuState({ menuOpened: false });
     });
     if (menuState.menuOpened === true) {
-      openMenu();
+      openMenu(width, height);
     } else if (menuState.menuOpened === false) {
       closeMenu();
     }

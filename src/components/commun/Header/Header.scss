@@ -3,18 +3,27 @@
   height: 100px;
   z-index: 110;
   visibility: hidden;
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 768px), all and (max-height: 600px) {
     height: 80px;
   }
 
   .logo {
     height: 40px;
     cursor: pointer;
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 768px), all and (max-height: 600px) {
       height: 30px;
     }
+    @media all and (max-width: 600px) {
+      height: 26px;
+    }
     @media all and (max-width: 425px) {
+      height: 23px;
+    }
+    @media all and (max-width: 375px) {
       height: 20px;
+    }
+    @media all and (max-width: 320px) {
+      height: 18px;
     }
   }
 
@@ -25,7 +34,7 @@
     height: 30px;
     width: 40px;
     cursor: pointer;
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 768px), all and (max-height: 600px) {
       height: 30px;
       width: 40px;
     }
@@ -41,7 +50,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      @media all and (max-width: 768px) {
+      @media all and (max-width: 768px), all and (max-height: 600px) {
         width: 20px;
         height: 10px;
       }
@@ -57,7 +66,7 @@
       cursor: pointer;
 
       svg {
-        @media all and (max-width: 768px) {
+        @media all and (max-width: 768px), all and (max-height: 600px) {
           width: 56px;
         }
 

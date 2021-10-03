@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./HeroSection.scss";
 import gsap from "gsap";
 import ScrollHeper from "../ScrollHelper/ScrollHeper";
-import useWindowDimensions from "../../../assets/hooks/useWindowDimensions";
+import { useViewport } from "../../../assets/hooks/useViewport";
 
 const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
-  const { width } = useWindowDimensions();
   const [initialScrollZero, setInitialScrollZero] = useState(true);
+  const { width, height } = useViewport();
 
   useEffect(() => {
     if (window.scrollY !== 0) {
@@ -56,7 +56,14 @@ const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
   }, []);
 
   return (
-    <section className="hero-section">
+    <section
+      className="hero-section"
+      style={{
+        height: `${
+          width <= 768 || height <= 600 ? height - 80 : height - 100
+        }px`,
+      }}
+    >
       <div className="container">
         <div className="row">
           <h4>
