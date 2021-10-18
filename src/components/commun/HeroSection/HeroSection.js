@@ -20,7 +20,7 @@ const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
       overflowY: window.scrollY === 0 ? "hidden" : "scroll",
     })
       .to([".hero-section", ".header"], { css: { visibility: "visible" } })
-      .from(".hero-section .line span", 1.6, {
+      .from(".hero-section .line span", 1, {
         y: 100,
         ease: "power4.out",
         skewY: 7,
@@ -28,18 +28,18 @@ const HeroSection = ({ title, longLines, shortLines, displayScrollHelper }) => {
           amount: 0.3,
         },
       })
-      .from(".header", 1.6, {
+      .from(".header", 1, {
         opacity: 0,
         ease: "power4.out",
       })
       .from(
         ".scroll-helper",
-        1.6,
+        1,
         {
           opacity: 0,
           ease: "power4.out",
         },
-        "-=1.6"
+        "-=1"
       )
       .to(".scroll-helper", {
         opacity: 0,

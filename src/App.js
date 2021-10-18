@@ -11,20 +11,6 @@ import Services from "./pages/services";
 import Erreur from "./pages/erreur";
 
 function App() {
-  /*useEffect(() => {
-    window.addEventListener("resize", () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-      let vw = window.innerWidth * 0.01;
-      document.documentElement.style.setProperty("--vw", `${vw}px`);
-
-      return () => {
-        window.removeEventListener("resize");
-      };
-    });
-  }, []);*/
-
   return (
     <ViewportProvider>
       <Router>

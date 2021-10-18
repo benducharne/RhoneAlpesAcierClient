@@ -54,12 +54,12 @@ const Cases = () => {
   const [activeGroup, setActiveGroup] = useState(1);
 
   const prevCases = () => {
-    gsap.to(".cases-row", 1.6, { xPercent: -100 * (activeGroup - 2) });
+    gsap.to(".cases-row", 1, { xPercent: -100 * (activeGroup - 2) });
     setActiveGroup(activeGroup - 1);
   };
 
   const nextCases = () => {
-    gsap.to(".cases-row", 1.6, { xPercent: -100 * activeGroup });
+    gsap.to(".cases-row", 1, { xPercent: -100 * activeGroup });
     setActiveGroup(activeGroup + 1);
   };
 

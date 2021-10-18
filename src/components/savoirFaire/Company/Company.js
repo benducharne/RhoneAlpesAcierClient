@@ -15,7 +15,7 @@ const Company = () => {
         trigger: ".company-section",
         start: "top center",
       },
-      duration: 1.6,
+      duration: 1,
       y: 100,
       ease: "power4.out",
       skewY: 7,
